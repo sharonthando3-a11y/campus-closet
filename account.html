@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Account | Campus Closet</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="account.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a class="logo" href="index.html">CAMPUS<span>CLOSET.</span></a>
+
+        <a href="index.html">← Back to shopping</a>
+
+    </header>
+
+    <main class="checkout-section">
+
+        <p class="eyebrow">CAMPUS CLOSET MEMBERS</p>
+
+        <h1>Welcome to your closet.</h1>
+
+        <p>Sign in, create an account, or shop without an account.</p>
+
+        <div class="account-options">
+
+            <button id="show-login" type="button">Sign in</button>
+
+            <button id="show-register" type="button">Create account</button>
+
+        </div>
+
+        <form id="login-form" hidden>
+
+            <h2>Welcome back</h2>
+
+            <label for="login-email">Email address</label>
+
+            <input type="email" id="login-email" required>
+
+            <label for="login-password">Password</label>
+
+            <input type="password" id="login-password" required>
+
+            <button type="submit">Sign in</button>
+
+            <p id="login-message" role="status"></p>
+
+        </form>
+
+        <form id="register-form" hidden>
+
+            <h2>Create your account</h2>
+
+            <label for="register-name">Full name</label>
+
+            <input type="text" id="register-name" required>
+
+            <label for="register-email">Email address</label>
+
+            <input type="email" id="register-email" required>
+
+            <label for="register-password">Password</label>
+
+            <input type="password" id="password"
+
+                   minlength="8" required>
+
+            <button type="submit">Create account</button>
+
+            <p id="register-message" role="status"></p>
+
+        </form>
+
+        <div class="guest-box">
+
+            <p>Don't want to create an account?</p>
+
+            <button id="continue-guest" type="button">
+
+                Continue as guest
+
+            </button>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Campus Closet. Made for campus life.</p>
+
+    </footer>
+
+</body>
+
+</html>

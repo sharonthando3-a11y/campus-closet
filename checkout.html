@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Campus Closet</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="checkout.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <h1>Campus Closet</h1>
+
+        <p>Your style. Your campus. Your closet.</p>
+
+        <nav>
+
+            <a href="index.html">Continue Shopping</a>
+
+        </nav>
+
+    </header>
+
+    <main class="checkout-page">
+
+        <section class="checkout-heading">
+
+            <h2>Checkout</h2>
+
+            <p>Almost yours! Review your order and enter your delivery details.</p>
+
+        </section>
+
+        <!-- ORDER SUMMARY -->
+
+        <section class="checkout-section">
+
+            <h3>1. Your Order</h3>
+
+            <div id="order-items">
+
+                <p>Your order items will appear here.</p>
+
+            </div>
+
+            <div class="order-totals">
+
+                <p>Subtotal: <strong id="subtotal">R0.00</strong></p>
+
+                <p>Delivery: <strong id="delivery-fee">R0.00</strong></p>
+
+                <p class="grand-total">
+
+                    Total: <strong id="order-total">R0.00</strong>
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- DELIVERY DETAILS -->
+
+        <section class="checkout-section">
+
+            <h3>2. Delivery Details</h3>
+
+            <form id="checkout-form">
+
+                <label for="full-name">Full name</label>
+
+                <input
+
+                    type="text"
+
+                    id="full-name"
+
+                    name="fullName"
+
+                    autocomplete="name"
+
+                    required
+
+                >
+
+                <label for="email">Email address</label>
+
+                <input
+
+                    type="email"
+
+                    id="email"
+
+                    name="email"
+
+                    autocomplete="email"
+
+                    required
+
+                >
+
+                <label for="phone">Phone number</label>
+
+                <input
+
+                    type="tel"
+
+                    id="phone"
+
+                    name="phone"
+
+                    autocomplete="tel"
+
+                    placeholder="e.g. 0712345678"
+
+                    required
+
+                >
+
+                <label for="address">Street address or residence</label>
+
+                <input
+
+                    type="text"
+
+                    id="address"
+
+                    name="address"
+
+                    autocomplete="street-address"
+
+                    required
+
+                >
+
+                <label for="city">City or town</label>
+
+                <input
+
+                    type="text"
+
+                    id="city"
+
+                    name="city"
+
+                    autocomplete="address-level2"
+
+                    required
+
+                >
+
+                <label for="province">Province</label>
+
+                <select id="province" name="province" required>
+
+                    <option value="">Select your province</option>
+
+                    <option>Eastern Cape</option>
+
+                    <option>Free State</option>
+
+                    <option>Gauteng</option>
+
+                    <option>KwaZulu-Natal</option>
+
+                    <option>Limpopo</option>
+
+                    <option>Mpumalanga</option>
+
+                    <option>Northern Cape</option>
+
+                    <option>North West</option>
+
+                    <option>Western Cape</option>
+
+                </select>
+
+                <label for="postal-code">Postal code</label>
+
+                <input
+
+                    type="text"
+
+                    id="postal-code"
+
+                    name="postalCode"
+
+                    autocomplete="postal-code"
+
+                    required
+
+                >
+
+                <!-- DELIVERY OPTION -->
+
+                <h3>3. Delivery Option</h3>
+
+                <label for="delivery-option">Choose delivery</label>
+
+                <select id="delivery-option" name="deliveryOption" required>
+
+                    <option value="standard">Standard delivery — R50.00</option>
+
+                    <option value="express">Express delivery — R100.00</option>
+
+                    <option value="collection">Campus collection — R0.00</option>
+
+                </select>
+
+                <!-- PAYMENT OPTION -->
+
+                <h3>4. Payment Method</h3>
+
+                <label for="payment-method">Choose a payment method</label>
+
+                <select id="payment-method" name="paymentMethod" required>
+
+                    <option value="">Select payment method</option>
+
+                    <option value="eft">EFT / Bank transfer (demo)</option>
+
+                    <option value="card">Debit or credit card (demo)</option>
+
+                    <option value="payfast">PayFast (not connected)</option>
+
+                </select>
+
+                <p class="payment-note">
+
+                    Demo checkout only. No payment will be processed.
+
+                </p>
+
+                <!-- PLACE ORDER -->
+
+                <button type="submit" id="place-order-button">
+
+                    Place Demo Order
+
+                </button>
+
+                <p id="checkout-message" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <!-- THANK-YOU CONFIRMATION -->
+
+        <section id="thank-you-section" hidden>
+
+            <h2>Thank you for shopping with Campus Closet!</h2>
+
+            <p>Your demo order has been recorded in this browser session.</p>
+
+            <p>Order reference: <strong id="order-reference"></strong></p>
+
+            <p>This is a demonstration. No real payment or delivery has been arranged.</p>
+
+            <a href="index.html">Continue Shopping</a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 Campus Closet. All rights reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
